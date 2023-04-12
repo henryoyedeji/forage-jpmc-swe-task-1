@@ -216,7 +216,7 @@ def get(req_handler, routes):
                 return
 
 
-def run(routes, host='0.0.0.0', port=8080):
+def run(routes, host='0.0.0.0', port=8000):
     """ Runs a class as a server whose methods have been decorated with
         @route.
     """
@@ -337,4 +337,5 @@ if __name__ == '__main__':
     if not os.path.isfile('test.csv'):
         print("No data found, generating...")
         generate_csv()
+
     run(App())
